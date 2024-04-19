@@ -24,9 +24,9 @@ export default function App() {
       ),
       children: [
         { index: true, element: <Home /> },
-        // { path: "/about", element: <About /> },
-        // { path: "/contact", element: <Contact /> },
-        // { path: "*", element: <NotFound /> },
+        { path: "/about", element: <About /> },
+        { path: "/contact", element: <Contact /> },
+        { path: "*", element: <NotFound /> },
       ],
     },
     {

@@ -7,7 +7,8 @@ function MainLayout() {
   return (
     <div>
       <Navbar />
-      <main>
+      <ThemeContainer />
+      <main className="align-element">
         <Outlet />
       </main>
     </div>
