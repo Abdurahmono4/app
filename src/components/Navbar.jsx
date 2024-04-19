@@ -1,10 +1,18 @@
+import { useContext } from "react";
 import Navlinks from "./Navlinks";
 import { Link } from "react-router-dom";
 
+import { GlobalContext } from "../context/useGlobalContext";
 function Navbar() {
+  const { dispatch, navbarBgColor } = useContext(GlobalContext);
+
   return (
-    <div>
-      <div className="navbar bg-base-300 align-element">
+    <div
+      className=""
+      style={{ backgroundColor: navbarBgColor }}
+      onClick={() => dispatch({ type: "CHANGE_COLOR", payload: "red" })}
+    >
+      <div className="navbar  align-element">
         <div className="navbar-start">
           <Link to="/" className="btn btn-primary lg:btn-lg hidden lg:flex  ">
             MyKitchen
